@@ -1,0 +1,115 @@
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(at 0 0, #fff3, #fff0),
+    radial-gradient(at 100% 100%, #0001, #0000),
+    #64686c;
+}
+
+#container {
+    width: 800px;
+    height: 400px;
+    background: #eee;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+.animaletrue {
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border-radius: 50%;
+    position: absolute;
+}
+.animalefalse {
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+.piante {
+    width: 20px;
+    height: 20px;
+    background: green;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.slider {
+  width: 200px;
+  margin: 20px;
+}
+
+
+button {
+  font-size: 18px;
+  background-color: #008542;
+  color: #fff;
+  text-shadow: 0 2px 0 rgb(0 0 0 / 25%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 0;
+  z-index: 1;
+  user-select: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: unset;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  font-weight: 900;
+  transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+button:before {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+  z-index: -1;
+  background-color: #008542 !important;
+  box-shadow: 0 -4px rgb(21 108 0 / 50%) inset,
+    0 4px rgb(100 253 31 / 99%) inset, -4px 0 rgb(100 253 31 / 50%) inset,
+    4px 0 rgb(21 108 0 / 50%) inset;
+}
+
+button:after {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: "";
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+  transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+button:hover:before {
+  box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+    -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+button:hover:after {
+  box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+button:active {
+  transform: translateY(4px);
+}
+
+button:active:after {
+  box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
